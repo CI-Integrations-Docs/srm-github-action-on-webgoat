@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
   
 variables:
-  - group: Blackduck
+  - group: 'DATA'
   
 steps:
 - task: BlackDuckSecurityScan@2.0.0
@@ -19,8 +19,8 @@ steps:
   env:
     DETECT_PROJECT_NAME: 'webgoat-testScan-docs1'
   inputs:
-    BLACKDUCKSCA_URL: $(BLACKDUCK_URL)
-    BLACKDUCKSCA_TOKEN: $(BLACKDUCK_TOKEN)
+    BLACKDUCKSCA_URL: $(BD_URL)
+    BLACKDUCKSCA_TOKEN: $(BD_TOKEN)
     # BLACKDUCKSCA_SCAN_FULL: true
     
     ### Mandatory when BLACKDUCKSCA_PRCOMMENT_ENABLED or BLACKDUCKSCA_FIXPR_ENABLED is set true
