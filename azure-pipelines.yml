@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
   
 variables:
-  - group: 'DATA'
+  - group: DATA
   
 steps:
 - task: BlackDuckSecurityScan@2.0.0
